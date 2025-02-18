@@ -1,0 +1,552 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+
+a {
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+a:hover {
+    opacity: 0.7;
+}
+
+.logo {
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+/* Banner */
+.banner img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Container para as imagens dos uniformes */
+.container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 30px;
+}
+
+.card {
+    text-align: center;
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Imagens */
+.card img {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+/* Efeito ao passar o mouse */
+.card img:hover {
+    transform: scale(1.1);
+}
+
+.card p {
+    margin-top: 10px;
+    font-size: 20px;
+    color: #ff6600;
+    font-family: system-ui, -apple-system, 'Roboto', sans-serif;
+
+}
+
+/* Navbar */
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: system-ui, -apple-system, 'Roboto', sans-serif;
+    background: #180071;
+    height: 12vh;
+    position: fixed; /* Fixa o cabeçalho */
+    top: 0; /* Cola no topo */
+    left: 0;
+    width: 100%; /* Faz ocupar toda a largura */
+    z-index: 1000; /* Garante que o cabeçalho fique sobre os outros elementos */
+}
+
+/* Lista de navegação */
+.nav-list {
+    list-style: none;
+    display: flex;
+}
+
+.nav-list li {
+    letter-spacing: 3px;
+    margin-left: 32px;
+}
+
+.mobile-menu {
+    display: none;
+    cursor: pointer;
+}
+
+.mobile-menu div {
+    width: 32px;
+    height: 2px;
+    background: #fff;
+    margin: 8px;
+    transition: 0.3s;
+}
+
+/* Responsividade */
+@media (max-width: 999px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    .nav-list {
+        position: absolute;
+        top: 8vh;
+        right: 0;
+        width: 50vw;
+        height: 92vh;
+        background: #180071;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in;
+    }
+
+    .nav-list li {
+        margin-left: 0;
+        opacity: 0;
+    }
+
+    .mobile-menu {
+        display: block;
+    }
+}
+
+/* Ativação do menu mobile */
+.nav-list.active {
+    transform: translateX(0);
+}
+
+
+.whatsapp-button {
+    display: inline-flex;
+    align-items: center;
+    background-color: #180071;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+.whatsapp-button i {
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+.whatsapp-button:hover {
+    background-color: #FF6200;
+}
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .servicos-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .whatsapp-button {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    .whatsapp-button i {
+        font-size: 20px;
+    }
+
+    .logos-wrapper {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    #contato-localizacao {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contato-container, .localizacao-container {
+        width: 90%;
+        max-width: 350px;
+        padding: 20px;
+    }
+
+    .mapa-container {
+        height: 200px;
+    }
+}
+
+
+/* Seção Fale Conosco e Localização */
+#contato-localizacao {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    padding: 30px 15px;
+}
+
+.contato-container, .localizacao-container {
+    background-color: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+.contato-container h2, .localizacao-container h2 {
+    font-size: 24px;
+    color: #180071;
+    margin-bottom: 15px;
+}
+
+.contato-infos {
+    text-align: left;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.flaticon-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+}
+
+.info-item p {
+    font-size: 16px;
+    color: #000;
+    margin: 0;
+}
+
+.mapa-container {
+    width: 100%;
+    height: 250px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Rodapé */
+footer {
+    background-color: #180071;
+    text-align: center;
+    padding: 20px;
+    color: white;
+    position: relative;
+}
+
+.logos-container {
+    background-color: #180071;
+    padding: 20px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+.logos-wrapper {
+    background-color: white;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.logos-wrapper img {
+    width: 200px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.logos-wrapper img:hover {
+    transform: scale(1.1);
+}
+
+#sobre {
+    background-color: #ececec;
+    padding: 40px 20px;
+}
+
+.conteudo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1100px;
+    margin: 0 auto;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.texto {
+    flex: 1;
+    min-width: 300px;
+}
+
+.texto h2 {
+    color: #ff6600;
+    font-size: 24px;
+    font-weight: bold;
+    font-family: 'Poppins' sans-serif;
+    margin-left: -100px;
+
+}
+
+.texto p {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.6;
+    font-family: 'Roboto' sans-serif;
+    margin-left: -100px;
+
+    
+}
+
+
+.imagem {
+    flex: 1;
+    min-width: 300px;
+    position: relative;
+}
+
+.imagem img {
+    width: 100%;
+    border-radius: 80px;
+    border: 5px solid #ff6600;
+}
+
+
+
+.servico-button {
+    display: inline-flex;
+    align-items: center;
+    background-color: #180071;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+    margin-top: 15px;
+    width: 80%;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.servico-button i {
+    font-size: 18px;
+    margin-right: 8px;
+}
+
+.servico-button:hover {
+    background-color: #ffbcd1;
+}
+
+
+#sobre {
+    background-color: #F1F1F1;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 40px;
+}
+
+.sobre-texto {
+    max-width: 50%;
+}
+
+.sobre-texto h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    color: #333;
+}
+
+.sobre-texto p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    color: #666;
+}
+
+.sobre-imagem img {
+    width: 400px;
+    height: auto;
+    border-radius: 10px;
+}
+
+
+.instagram {
+    background-color: #FF6200;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 30px;
+    border-radius: 20px;
+    margin: 30px auto;
+    width: 40%;
+    justify-content: center; /* Aproxima os textos */
+    gap: 200px;
+}
+
+.instagram-texto p {
+    font-size: 22px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    margin: 5px;
+}
+
+.instagram-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.instagram-handle {
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+}
+
+.instagram-botao {
+    background-color: white;
+    color: #180071; 
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.instagram-botao img {
+    width: 20px;
+    margin-right: 10px;
+}
+
+
+.parceiros {
+    background-color: #180071;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 50px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.parceiros-texto {
+    max-width: 40%;
+
+}
+
+.parceiros-texto h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.parceiros-destaque {
+    background-color: #FF6200; /* Laranja */
+    color: white;
+    font-family: 'Roboto' sans-serif;
+    font-size: 24px;
+    padding: 20px 20px;
+    border-radius: 40px;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.parceiros-logos {
+    background-color: white;
+    padding:30px 30px;
+    border-radius: 20px;
+    display: flex;
+    gap: 80px;
+}
+
+.parceiros-logos img {
+    width: 100px;
+    height: auto;
+}
+
+.mobile-menu.active .line1 {
+    transform: rotate(-45deg) translate(-8px, 8px);
+}
+
+.mobile-menu.active .line2 {
+    opacity: 0;
+}
+
+.mobile-menu.active .line3 {
+    transform: rotate(45deg) translate(-5px, -7px);
+}
+
+/* Seção de uniformes */
+.uniformes {
+    padding: 40px 20px;
+}
+
+.uniformes h2 {
+    color: #ff6600;
+    font-family: 'Poppins', sans-serif;
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-align: center;
+}
