@@ -2,10 +2,13 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-
+@font-face {
+    font-family: 'Gill Sans';
+    src: url(Poppins-ExtraLight.ttf);
+}
 
 a {
     color: #fff;
@@ -29,6 +32,7 @@ a:hover {
     width: 100%;
     height: auto;
     display: block;
+    padding-top: 12vh;
 }
 
 /* Container para as imagens dos uniformes */
@@ -46,11 +50,13 @@ a:hover {
     padding: 10px;
     border-radius: 10px;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 300px;
 }
 
 /* Imagens */
 .card img {
-    width: 300px;
+    width: 100%;
     height: auto;
     border-radius: 10px;
     transition: transform 0.3s ease;
@@ -65,8 +71,6 @@ a:hover {
     margin-top: 10px;
     font-size: 20px;
     color: #ff6600;
-    font-family: system-ui, -apple-system, 'Roboto', sans-serif;
-
 }
 
 /* Navbar */
@@ -74,14 +78,14 @@ nav {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    font-family: system-ui, -apple-system, 'Roboto', sans-serif;
     background: #180071;
     height: 12vh;
-    position: fixed; /* Fixa o cabeçalho */
-    top: 0; /* Cola no topo */
+    position: fixed;
+    top: 0;
     left: 0;
-    width: 100%; /* Faz ocupar toda a largura */
-    z-index: 1000; /* Garante que o cabeçalho fique sobre os outros elementos */
+    width: 100%;
+    z-index: 1000;
+    padding: 0 20px;
 }
 
 /* Lista de navegação */
@@ -143,7 +147,6 @@ nav {
     transform: translateX(0);
 }
 
-
 .whatsapp-button {
     display: inline-flex;
     align-items: center;
@@ -152,7 +155,6 @@ nav {
     padding: 15px 25px;
     border-radius: 50px;
     text-decoration: none;
-    font-family: 'Roboto', sans-serif;
     font-size: 16px;
     transition: background-color 0.3s ease;
     position: fixed;
@@ -218,7 +220,6 @@ nav {
         height: 200px;
     }
 }
-
 
 /* Seção Fale Conosco e Localização */
 #contato-localizacao {
@@ -314,8 +315,8 @@ footer {
 }
 
 #sobre {
-    background-color: #ececec;
-    padding: 40px 20px;
+    background-color: #000;
+    padding: 60px 20px;
 }
 
 .conteudo {
@@ -326,32 +327,30 @@ footer {
     margin: 0 auto;
     gap: 40px;
     flex-wrap: wrap;
+    color: #ff6600;
+    font-weight: bold;
 }
 
 .texto {
     flex: 1;
     min-width: 300px;
+    padding: 20px;
+    text-align: center;
 }
 
 .texto h2 {
     color: #ff6600;
     font-size: 24px;
     font-weight: bold;
-    font-family: 'Poppins' sans-serif;
-    margin-left: -100px;
-
+    margin-left: 0;
 }
 
 .texto p {
     font-size: 16px;
     color: #333;
     line-height: 1.6;
-    font-family: 'Roboto' sans-serif;
-    margin-left: -100px;
-
-    
+    margin-left: 0;
 }
-
 
 .imagem {
     flex: 1;
@@ -365,8 +364,6 @@ footer {
     border: 5px solid #ff6600;
 }
 
-
-
 .servico-button {
     display: inline-flex;
     align-items: center;
@@ -375,7 +372,6 @@ footer {
     padding: 10px 20px;
     border-radius: 50px;
     text-decoration: none;
-    font-family: 'Poppins', sans-serif;
     font-size: 14px;
     transition: background-color 0.3s ease;
     margin-top: 15px;
@@ -394,7 +390,6 @@ footer {
     background-color: #ffbcd1;
 }
 
-
 #sobre {
     background-color: #F1F1F1;
     display: flex;
@@ -408,16 +403,14 @@ footer {
 }
 
 .sobre-texto h2 {
-    font-family: 'Poppins', sans-serif;
     font-size: 32px;
     font-weight: 700;
-    color: #333;
+    color: #000;
 }
 
 .sobre-texto p {
-    font-family: 'Roboto', sans-serif;
     font-size: 18px;
-    color: #666;
+    color: #000;
 }
 
 .sobre-imagem img {
@@ -426,115 +419,163 @@ footer {
     border-radius: 10px;
 }
 
-
+/* Seção do Instagram */
 .instagram {
     background-color: #FF6200;
     color: white;
     display: flex;
     align-items: center;
-    padding: 30px;
+    padding: 20px;
     border-radius: 20px;
-    margin: 30px auto;
-    width: 40%;
-    justify-content: center; /* Aproxima os textos */
-    gap: 200px;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 800px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
 .instagram-texto p {
-    font-size: 22px;
-    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
     font-weight: bold;
     margin: 5px;
+    text-align: center;
 }
 
 .instagram-info {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 5px;
+    gap: 10px;
 }
 
 .instagram-handle {
-    font-size: 20px;
-    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
     font-weight: bold;
 }
 
 .instagram-botao {
     background-color: white;
-    color: #180071; 
-    font-size: 16px;
-    font-family: 'Poppins', sans-serif;
+    color: #180071;
+    font-size: 14px;
     display: flex;
     align-items: center;
-    padding: 10px 15px;
+    padding: 8px 12px;
     border-radius: 20px;
     text-decoration: none;
     font-weight: bold;
 }
 
 .instagram-botao img {
-    width: 20px;
-    margin-right: 10px;
+    width: 18px;
+    margin-right: 8px;
 }
 
+/* Responsividade para a seção do Instagram */
+@media (max-width: 768px) {
+    .instagram {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 10px;
+    }
 
+    .instagram-texto p {
+        font-size: 16px;
+    }
+
+    .instagram-handle {
+        font-size: 16px;
+    }
+
+    .instagram-botao {
+        font-size: 12px;
+        padding: 6px 10px;
+    }
+}
+
+/* Seção de Parceiras */
 .parceiros {
     background-color: #180071;
     color: white;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    padding: 50px;
-    flex-wrap: wrap;
-    margin-top: 10px;
+    padding: 50px 20px;
+    text-align: center;
 }
 
 .parceiros-texto {
-    max-width: 40%;
-
+    max-width: 100%;
+    margin-bottom: 30px;
 }
 
 .parceiros-texto h2 {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 24px;
     font-weight: bold;
+    margin-bottom: 20px;
 }
 
 .parceiros-destaque {
-    background-color: #FF6200; /* Laranja */
+    background-color: #FF6200;
     color: white;
-    font-family: 'Roboto' sans-serif;
     font-size: 24px;
-    padding: 20px 20px;
+    padding: 15px 30px;
     border-radius: 40px;
     display: inline-block;
     margin-top: 10px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .parceiros-logos {
     background-color: white;
-    padding:30px 30px;
+    padding: 20px;
     border-radius: 20px;
     display: flex;
-    gap: 80px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
 .parceiros-logos img {
     width: 100px;
     height: auto;
+    transition: transform 0.3s ease;
 }
 
-.mobile-menu.active .line1 {
-    transform: rotate(-45deg) translate(-8px, 8px);
+.parceiros-logos img:hover {
+    transform: scale(1.1);
 }
 
-.mobile-menu.active .line2 {
-    opacity: 0;
+/* Responsividade para a seção de Parceiras */
+@media (max-width: 768px) {
+    .parceiros {
+        padding: 30px 15px;
+    }
+
+    .parceiros-texto h2 {
+        font-size: 20px;
+    }
+
+    .parceiros-destaque {
+        font-size: 18px;
+        padding: 10px 20px;
+    }
+
+    .parceiros-logos {
+        gap: 15px;
+        padding: 15px;
+    }
+
+    .parceiros-logos img {
+        width: 80px;
+    }
 }
 
-.mobile-menu.active .line3 {
-    transform: rotate(45deg) translate(-5px, -7px);
+@media (max-width: 480px) {
+    .parceiros-logos img {
+        width: 60px;
+    }
 }
 
 /* Seção de uniformes */
@@ -544,9 +585,128 @@ footer {
 
 .uniformes h2 {
     color: #ff6600;
-    font-family: 'Poppins', sans-serif;
     font-size: 24px;
     margin-bottom: 20px;
     font-weight: bold;
     text-align: center;
+}
+
+/* Carrossel */
+.carousel-container {
+    display: flex;
+    padding: 0 20px;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(to left top, #6A6D78);
+}
+
+.wrapper {
+    max-width: 1100px;
+    width: 100%;
+    position: relative;
+}
+
+.wrapper i {
+    top: 50%;
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+    font-size: 1.25rem;
+    position: absolute;
+    text-align: center;
+    line-height: 50px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.23);
+    transform: translateY(-50%);
+    transition: transform 0.1s linear;
+}
+
+.wrapper i:active{
+    transform: translateY(-50%) scale(0.85);
+}
+
+.wrapper i:first-child{
+    left: -22px;
+}
+
+.wrapper i:last-child{
+    right: -22px;
+}
+
+.wrapper .carousel{
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc((100% / 3) - 12px);
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 16px;
+    border-radius: 8px;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+}
+
+.carousel::-webkit-scrollbar {
+    display: none;
+}
+
+.carousel .card {
+    scroll-snap-align: start;
+    height: 350px;
+    list-style: none;
+    background: #fff;
+    cursor: pointer;
+    padding-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+}
+
+.carousel .card .img {
+    background: #FF6200;
+    height: 148px;
+    width: 148px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card .img img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #fff;
+}
+
+.carousel .card h2 {
+    font-weight: 500;
+    font-size: 1.56rem;
+    margin: 30px 0 5px;
+}
+
+.carousel .card {
+    color: #180071;
+    font-size: 1.31rem;
+}
+
+/* Responsividade */
+@media screen and (max-width: 900px) {
+    .wrapper .carousel {
+        grid-auto-columns: calc((100% / 2) - 9px);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .wrapper .carousel {
+        grid-auto-columns: 100%;
+    }
+
+    .carousel-container {
+        padding: 0 15px;
+    }
 }
